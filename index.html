@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to AIRLINE.com. We always give the Lowest Price Guarantee.">
 
-    <title>Flights to Frankfurt from %{price}% | AIRLINE.com</title>
+    <title>Welcome | AIRLINE.com</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -38,7 +39,7 @@
 
         function addStructuredData() {
             fetchSchemas('./api/structured-data-airline.json');
-            fetchSchemas('./api/structured-data-offer.json');
+            fetchSchemas('./api/structured-data-breadcrumb-homepage.json');
         }
 
         document.addEventListener("DOMContentLoaded", function () {
@@ -70,8 +71,8 @@
         <section class="py-5 text-center container">
             <div class="row py-lg-5">
                 <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-light">Flights to Frankfurt</h1>
-                    <p class="lead text-muted">Check out the prices for airline tickets to Frankfurt</p>
+                    <h1 class="fw-light">AIRLINE.com</h1>
+                    <p class="lead text-muted">Cheap flights </p>
                 </div>
             </div>
         </section>
@@ -81,85 +82,61 @@
 
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div class="col">
-                        <div class="card shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Warsaw (WAW) - Frankfurt (FRA)</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">Thumbnail</text>
-                            </svg>
+                        <a href="flights-to-frankfurt.html">
+                            <div class="card shadow-sm">
+                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                                    <title>Flights to Frankfurt</title>
+                                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                        dy=".3em">Flights to Frankfurt</text>
+                                </svg>
 
-                            <div class="card-body">
-                                <p class="card-text">
-                                <ul>
-                                    <li>09-08-2022 - 15-08-2022</li>
-                                    <li>Round trip</li>
-                                </ul>
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">from 123 EUR</small>
                                     </div>
-                                    <small class="text-muted">from 123 EUR</small>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col">
-                        <div class="card shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Tallinn (TLL) - Frankfurt (FRA)</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">Thumbnail</text>
-                            </svg>
+                        <a href="#">
+                            <div class="card shadow-sm">
+                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                                    <title>Flights to Munich</title>
+                                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                        dy=".3em">Flights to Munich</text>
+                                </svg>
 
-                            <div class="card-body">
-                                <p class="card-text">
-                                <ul>
-                                    <li>01-08-2022 - 05-08-2022</li>
-                                    <li>Round trip</li>
-                                </ul>
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">from 324 EUR</small>
                                     </div>
-                                    <small class="text-muted">from 299 EUR</small>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col">
-                        <div class="card shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Stockhlom (ARN) - Frankfurt (FRA)</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">Thumbnail</text>
-                            </svg>
+                        <a href="#">
+                            <div class="card shadow-sm">
+                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                                    <title>Flights to Berlin</title>
+                                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                                        dy=".3em">Flights to Berlin</text>
+                                </svg>
 
-                            <div class="card-body">
-                                <p class="card-text">
-                                <ul>
-                                    <li>03-08-2022 - 11-08-2022</li>
-                                    <li>Round trip</li>
-                                </ul>
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">from 453 EUR</small>
                                     </div>
-                                    <small class="text-muted">from 122453 EUR</small>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                 </div>
