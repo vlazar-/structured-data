@@ -11,6 +11,41 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <script type="text/javascript">
+        function replace(source, template, data) {
+            return source.replace(template, data);
+        }
+
+        function addLowestPriceToTitle() {
+            fetch('./api/prices.json')
+                .then(response => response.json())
+                .then(data => document.title = replace(document.title, '%{price}%', data.lowestPrice))
+                .catch(error => console.log(error));
+        }
+
+        function fetchSchemas(path) {
+            fetch(path)
+                .then(response => response.text())
+                .then(structuredDataText => {
+                    const script = document.createElement('script');
+                    script.setAttribute('type', 'application/ld+json');
+                    script.textContent = structuredDataText;
+                    document.head.appendChild(script);
+                })
+                .catch(error => console.log(error));
+        }
+
+        function addStructuredData() {
+            fetchSchemas('./api/structured-data-airline.json');
+            fetchSchemas('./api/structured-data-offer.json');
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            addLowestPriceToTitle();
+            addStructuredData();
+        });
+    </script>
 </head>
 
 <body>
@@ -57,10 +92,10 @@
 
                             <div class="card-body">
                                 <p class="card-text">
-                                    <ul>
-                                        <li>09-08-2022 - 15-08-2022</li>
-                                        <li>Round trip</li>
-                                    </ul>
+                                <ul>
+                                    <li>09-08-2022 - 15-08-2022</li>
+                                    <li>Round trip</li>
+                                </ul>
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
@@ -84,10 +119,10 @@
 
                             <div class="card-body">
                                 <p class="card-text">
-                                    <ul>
-                                        <li>01-08-2022 - 05-08-2022</li>
-                                        <li>Round trip</li>
-                                    </ul>
+                                <ul>
+                                    <li>01-08-2022 - 05-08-2022</li>
+                                    <li>Round trip</li>
+                                </ul>
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
@@ -111,10 +146,10 @@
 
                             <div class="card-body">
                                 <p class="card-text">
-                                    <ul>
-                                        <li>03-08-2022 - 11-08-2022</li>
-                                        <li>Round trip</li>
-                                    </ul>
+                                <ul>
+                                    <li>03-08-2022 - 11-08-2022</li>
+                                    <li>Round trip</li>
+                                </ul>
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
@@ -126,7 +161,7 @@
                             </div>
                         </div>
                     </div>
-                
+
                 </div>
             </div>
         </div>

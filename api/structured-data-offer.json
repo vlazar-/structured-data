@@ -1,0 +1,10 @@
+{
+    "@context": "http://schema.org",
+    "@type": "product",
+    "name": "Find the Best Flight Deals to Frankfurt",
+    "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "123",
+        "priceCurrency":"EUR"
+    }
+}

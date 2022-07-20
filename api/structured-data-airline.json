@@ -1,0 +1,13 @@
+{
+    "@context": "http://schema.org",
+    "@type": "Airline",
+    "name": "Top Airline",
+    "url": "https://www.top-airline.com",
+    "sameAs": [
+        "https://www.youtube.com/user/top-airline",
+        "https://twitter.com/top-airline",
+        "https://www.facebook.com/top-airline",
+        "https://www.instagram.com/top-airline",
+        "https://www.linkedin.com/company/top-airline/"
+    ]
+}
